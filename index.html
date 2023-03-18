@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./w3.css">
+  <meta charset="utf-8"> 
+</head>
+
+<style>
+.button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+</style>
+    <title>Test page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">关闭 &times;</button>
+    <a href="#" class="w3-bar-item w3-button">TEST LINK 1</a>
+    <a href="#" class="w3-bar-item w3-button">TEST LINK 2</a>
+    <a href="#" class="w3-bar-item w3-button">TEST LINK 3</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+    <div class="w3-container">
+    </div>
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+<h2>Button Test</h2>
+<button class="button"> Button</button>
+<br>
+<p>此页面的诞生离不开W3CSchool上抄下来的代码（笑）<br>会换掉的。</p>
+</body>
+</html>
